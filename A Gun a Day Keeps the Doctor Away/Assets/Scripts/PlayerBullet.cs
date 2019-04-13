@@ -14,7 +14,7 @@ public class PlayerBullet : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        range = theplayer.range;
+        //range = theplayer.range;
     }
 
 
