@@ -8,7 +8,7 @@ public class SpawnEnemy : MonoBehaviour
     ShootandHealth playerScript;
     public int health;
 
-    //public GameObject enemy;
+    public GameObject enemy;
     public float spawnTime = 3f;
     public Transform[] spawnPoints;
 
@@ -32,7 +32,7 @@ public class SpawnEnemy : MonoBehaviour
         }
         int SpawnPointIndex = Random.Range(0, spawnPoints.Length);
 
-        //Instantiate(enemy, spawnPoints[SpawnPointIndex].position, spawnPoints[SpawnPointIndex].rotation);
+        Instantiate(enemy, spawnPoints[SpawnPointIndex].position, spawnPoints[SpawnPointIndex].rotation);
     }
 
     // Update is called once per frame
