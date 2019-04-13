@@ -39,6 +39,7 @@ public class ShootandHealth : MonoBehaviour
             Attack();
         }
         health -= 1;
+        Debug.Log("shootandhealth update");
     }
 
     void Attack()
