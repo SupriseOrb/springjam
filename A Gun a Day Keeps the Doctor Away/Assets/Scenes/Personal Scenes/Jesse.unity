@@ -230,6 +230,7 @@ MonoBehaviour:
   damage: 0
   attackDelay: 0
   theplayer: {fileID: 1166976343}
+  gamecontroller: {fileID: 0}
 --- !u!212 &183338381
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -813,6 +814,10 @@ MonoBehaviour:
   range: 10
   tick: 0
   bullet: {fileID: 1372637634516329998, guid: 3525503a2ce793d45a8caffa515aad76, type: 3}
+  shotgunrate: 0.5
+  pistolrate: 0.3
+  gatlingrate: 0.2
+  reloadtime: 0
 --- !u!1 &1986434017
 GameObject:
   m_ObjectHideFlags: 0
@@ -855,6 +860,7 @@ MonoBehaviour:
   damage: 0
   attackDelay: 0
   theplayer: {fileID: 0}
+  gamecontroller: {fileID: 0}
 --- !u!212 &1986434019
 SpriteRenderer:
   m_ObjectHideFlags: 0
