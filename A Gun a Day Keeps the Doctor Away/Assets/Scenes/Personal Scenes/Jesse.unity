@@ -599,10 +599,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1aa96e84ee32de54984fc5ad46ffef49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velY: 0
-  velX: 0
-  travelled: 0
-  range: 50
+  speed: 5
+  range: 5
   theplayer: {fileID: 1166976343}
 --- !u!212 &679961890
 SpriteRenderer:
