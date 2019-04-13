@@ -36,7 +36,7 @@ public class Poison : MonoBehaviour
     // Update is called once per frame
     void Update()
     { 
-        if (isPoisoned== true);
+        if (isPoisoned== true)
         {
             StartCoroutine("PoisonDamage");
         }
