@@ -30,6 +30,10 @@ public class Nurse_Enemy_Movement : MonoBehaviour
     private float lastAttackTime;
     public float attackDelay;
 
+    //Player Health Variables
+    public GameObject theplayer;
+    ShootandHealth healthScript;
+
 
     void Awake()
     {
@@ -38,12 +42,15 @@ public class Nurse_Enemy_Movement : MonoBehaviour
         NurseAudio = GetComponent<AudioSource>();
         NurseCurHealth = NurseMaxHealth;
 
+        speed = 1;
+        attackDelay = 2;
+        attackRange = 3;
         score = 0;
     }
     // Start is called before the first frame update
     void Start()
     {
-
+        healthScript = theplayer.GetComponent<ShootandHealth>();
     }
     void NurseDead()
     {
@@ -84,14 +91,18 @@ public class Nurse_Enemy_Movement : MonoBehaviour
 
         //Attack? Checking Distance between Player and Nurse
         float distanceToPlayer = Vector3.Distance(transform.position, target.position);
+        Debug.Log(distanceToPlayer);
         if (distanceToPlayer < attackRange)
         {
+            Debug.Log("Close enough to player");
             //check if enough time has passed since last attack
             if (Time.time > lastAttackTime + attackDelay)
             {
-                target.SendMessage("TakeDamage");
+                //target.SendMessage("Player Take Damage");
+                Debug.Log("damage taken");
+                healthScript.health += 10;
                 //Record Time Attacked
-                lastAttackTime = Time.deltaTime;
+                lastAttackTime = Time.time;
             }
         }
 
