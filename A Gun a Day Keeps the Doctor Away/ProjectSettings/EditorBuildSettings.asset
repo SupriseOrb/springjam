@@ -4,5 +4,14 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 515cb60f65519d2499a1fe04f3ec4f16
+  - enabled: 1
+    path: Assets/Scenes/Personal Scenes/Annie.unity
+    guid: 32fd8d651d0c32247a6bc10987a507fe
+  - enabled: 1
+    path: Assets/Scenes/Instructions.unity
+    guid: 95c2bc14551ec874dbfc456e65629bdb
   m_configObjects: {}
