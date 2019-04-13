@@ -16,11 +16,25 @@ public class Enemy_Doctor_Movement : MonoBehaviour
 
     public Vector2 savedVelocity;
 
+    //Attack Variables
+    public float attackRange;
+    public int damage;
+    private float lastAttackTime;
+    public float attackDelay;
+
+    //Player Health Variables
+    public GameObject theplayer;
+    ShootandHealth healthScript;
+
     // Start is called before the first frame update
     void Awake()
     {
         waitTime = StaticWaitTime;
         target = GameObject.FindWithTag("Player").GetComponent<Transform>();
+        speed = 1;
+        attackDelay = 2;
+        attackRange = 3;
+        healthScript = theplayer.GetComponent<ShootandHealth>();
     }
 
     // Update is called once per frame
@@ -57,9 +71,26 @@ public class Enemy_Doctor_Movement : MonoBehaviour
 
         //if (Vector2.Distance(transform.position, target.position) > stoppingDistance)
         //{
-         //   transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
-           
+        //   transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+
         //}
+
+        //Attack? Checking Distance between Player and Nurse
+        float distanceToPlayer = Vector3.Distance(transform.position, target.position);
+        Debug.Log(distanceToPlayer);
+        if (distanceToPlayer < attackRange)
+        {
+            Debug.Log("Close enough to player");
+            //check if enough time has passed since last attack
+            if (Time.time > lastAttackTime + attackDelay)
+            {
+                //target.SendMessage("Player Take Damage");
+                Debug.Log("damage taken");
+                healthScript.health += 10;
+                //Record Time Attacked
+                lastAttackTime = Time.time;
+            }
+        }
 
     }
 
