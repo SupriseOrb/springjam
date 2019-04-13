@@ -7,36 +7,61 @@ public class Enemy_Doctor_Movement : MonoBehaviour
     public float speed;
     public float stoppingDistance;
     private Transform target;
-    public float DashState;
+    public float StaticDashTime;
+    private float DashTime;
     public bool canDocDash = true;
+    public float StaticWaitTime;
+    float waitTime;
+    Vector3 TargetPosition;
+
     public Vector2 savedVelocity;
 
     // Start is called before the first frame update
     void Awake()
     {
+        waitTime = StaticWaitTime;
         target = GameObject.FindWithTag("Player").GetComponent<Transform>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (DashState > 0)
+        if (DashTime == StaticDashTime)
         {
-            canDocDash = false;
-            DashState -= Time.deltaTime;
+            TargetPosition = target.position;
         }
 
-        
-        if (DashState <= 0)
+        if (DashTime > 0)
         {
-            canDocDash = true;
+            if (Vector2.Distance(transform.position, target.position) > stoppingDistance)
+            {
+                transform.position = Vector2.MoveTowards(transform.position, TargetPosition, speed * Time.deltaTime);
+
+            }
+            
+
+            //canDocDash = false;
+            DashTime -= Time.deltaTime;
         }
 
-        if (Vector2.Distance(transform.position, target.position) > stoppingDistance)
+
+        if (DashTime <= 0)
         {
-            transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+            waitTime -= Time.deltaTime;
+            if (waitTime <= 0)
+            {
+            DashTime = StaticDashTime;
+            waitTime = StaticWaitTime;
+            }
+        }
+
+        //if (Vector2.Distance(transform.position, target.position) > stoppingDistance)
+        //{
+         //   transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
            
-        }
+        //}
 
     }
+
+
 }
