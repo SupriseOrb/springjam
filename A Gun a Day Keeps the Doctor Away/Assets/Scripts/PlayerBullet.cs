@@ -20,7 +20,7 @@ public class PlayerBullet : MonoBehaviour
     void Update()
     {
         rb.velocity = new Vector2(0,velY);
-        travelled += velY;
+        //travelled += velY;
         if (travelled == 0)
         {
             //
