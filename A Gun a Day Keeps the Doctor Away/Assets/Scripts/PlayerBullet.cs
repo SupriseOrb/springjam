@@ -5,25 +5,27 @@ using UnityEngine;
 public class PlayerBullet : MonoBehaviour
 {
     public float velY = 5f;
+    public float velX = 0;
     public int travelled = 0;
     public int range;
+    public GameObject theplayer;
     Rigidbody2D rb;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        range = 30;
+        range = theplayer.range;
     }
 
 
     // Update is called once per frame
     void Update()
     {
-        rb.velocity = new Vector2(0,velY);
+        rb.velocity = new Vector2(velX,velY);
         //travelled += velY;
-        if (travelled == 0)
+        if (travelled >= range)
         {
-            //
+            //destroy
         }
     }
 }

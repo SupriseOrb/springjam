@@ -8,12 +8,10 @@ public class ShootandHealth : MonoBehaviour
     public int health = 100;
     public int currentWeap = 0;
     public int range = 10;
-    //public float velY = 5f;
-    
+
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -40,6 +38,7 @@ public class ShootandHealth : MonoBehaviour
         {
             Attack();
         }
+        health -= 1;
     }
 
     void Attack()
