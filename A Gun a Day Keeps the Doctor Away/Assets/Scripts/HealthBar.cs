@@ -5,9 +5,11 @@ using UnityEngine;
 public class HealthBar : MonoBehaviour
 {
     public int health;
-    public int difference;
+
     public GameObject theplayer;
     ShootandHealth playerScript;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,8 +24,21 @@ public class HealthBar : MonoBehaviour
     }
     private void OnGUI()
     {
-        GUIStyle myStyle = new GUIStyle();
-        myStyle.fontSize = 30;
-        GUI.Label(new Rect(10, 10, 100, 50), "Health: " + health.ToString(),myStyle);
+        //Health Count
+        GUIStyle healthStyle = new GUIStyle();
+        healthStyle.fontSize = 30;
+        if (health >= 66)
+        {
+            healthStyle.normal.textColor = Color.green;
+        }
+        else if (health >= 33)
+        {
+            healthStyle.normal.textColor = Color.yellow;
+        }
+        else
+        {
+            healthStyle.normal.textColor = Color.red;
+        }
+        GUI.Label(new Rect(10, 50, 100, 50), "Health: " + health.ToString(),healthStyle);
     }
 }

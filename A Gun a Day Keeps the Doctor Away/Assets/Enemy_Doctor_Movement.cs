@@ -26,6 +26,10 @@ public class Enemy_Doctor_Movement : MonoBehaviour
     public GameObject theplayer;
     ShootandHealth healthScript;
 
+    //Score Variables
+    public GameObject gamecontroller;
+    Scoring scoreScript;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -35,6 +39,7 @@ public class Enemy_Doctor_Movement : MonoBehaviour
         attackDelay = 2;
         attackRange = 3;
         healthScript = theplayer.GetComponent<ShootandHealth>();
+        scoreScript = gamecontroller.GetComponent<Scoring>();
     }
 
     // Update is called once per frame
@@ -83,15 +88,12 @@ public class Enemy_Doctor_Movement : MonoBehaviour
 
         //Attack? Checking Distance between Player and Nurse
         float distanceToPlayer = Vector3.Distance(transform.position, target.position);
-        Debug.Log(distanceToPlayer);
         if (distanceToPlayer < attackRange)
         {
-            Debug.Log("Close enough to player");
             //check if enough time has passed since last attack
             if (Time.time > lastAttackTime + attackDelay)
             {
                 //target.SendMessage("Player Take Damage");
-                Debug.Log("damage taken");
                 healthScript.health += 10;
                 //Record Time Attacked
                 lastAttackTime = Time.time;
