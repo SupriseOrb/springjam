@@ -9,7 +9,7 @@ public class ShootandHealth : MonoBehaviour
     public int currentWeap = 0;
     public int range = 10;
     public int tick = 0; //tracks how many frames has passed to know when to decrease health again
-
+    public GameObject bullet;
     // Start is called before the first frame update
     void Start()
     {
@@ -35,7 +35,7 @@ public class ShootandHealth : MonoBehaviour
             currentWeap = 2;
         }
         
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButton(1))
         {
             Attack();
         }
@@ -62,6 +62,7 @@ public class ShootandHealth : MonoBehaviour
         {
             range = 50;
         }
+        Instantiate(bullet, transform.position, transform.rotation);
     }
 
     void OnTriggerEnter2D(Collider2D collide)
