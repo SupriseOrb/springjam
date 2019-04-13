@@ -7,8 +7,7 @@ public class PlayerBullet : MonoBehaviour
     public float speed;
      float travelled = 0;
     public float range;
-   // public GameObject theplayer;
-
+    // public GameObject theplayer;
     void Start()
     {
   
@@ -29,6 +28,24 @@ public class PlayerBullet : MonoBehaviour
         {
             Destroy(gameObject);
             //destroy
+        }
+
+
+        
+
+     /*   void OnCollisionEnter2D(Collision2D col)
+        {
+            if (col.gameObject.tag == "enemy")
+            {
+                Destroy(col.gameObject);
+            }
+        }*/
+    }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "Enemy")
+        {
+            Destroy(other.gameObject);
         }
     }
 }

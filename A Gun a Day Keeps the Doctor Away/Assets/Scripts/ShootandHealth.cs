@@ -34,8 +34,8 @@ public class ShootandHealth : MonoBehaviour
         {
             currentWeap = 2;
         }
-        
-        if (Input.GetMouseButton(1))
+
+        if (Input.GetKey(KeyCode.Space))
         {
             Attack();
         }
