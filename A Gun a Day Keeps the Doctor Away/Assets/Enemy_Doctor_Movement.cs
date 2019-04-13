@@ -40,6 +40,12 @@ public class Enemy_Doctor_Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //chase coding
+        if (Vector2.Distance(transform.position, target.position) > stoppingDistance)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+        }
+
         if (DashTime == StaticDashTime)
         {
             TargetPosition = target.position;
