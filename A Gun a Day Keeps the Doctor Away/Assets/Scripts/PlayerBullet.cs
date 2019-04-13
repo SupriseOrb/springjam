@@ -7,7 +7,7 @@ public class PlayerBullet : MonoBehaviour
     public float speed;
      float travelled = 0;
     public float range;
-    public GameObject theplayer;
+   // public GameObject theplayer;
 
     void Start()
     {
@@ -16,8 +16,8 @@ public class PlayerBullet : MonoBehaviour
 
     private void Awake()
     {
-        Vector3 newRotation = new Vector3(theplayer.transform.eulerAngles.x, theplayer.transform.eulerAngles.x, theplayer.transform.eulerAngles.z);
-        gameObject.transform.eulerAngles = newRotation;
+     //   Vector3 newRotation = new Vector3(theplayer.transform.eulerAngles.x, theplayer.transform.eulerAngles.x, theplayer.transform.eulerAngles.z);
+       // gameObject.transform.eulerAngles = newRotation;
     }
 
     // Update is called once per frame
