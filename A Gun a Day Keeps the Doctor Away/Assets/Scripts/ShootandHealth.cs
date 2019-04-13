@@ -5,9 +5,10 @@ using UnityEngine.UI;
 
 public class ShootandHealth : MonoBehaviour
 {
-    public int health = 100;
+    public int health = 85;
     public int currentWeap = 0;
     public int range = 10;
+    public int tick = 0; //tracks how many frames has passed to know when to decrease health again
 
     // Start is called before the first frame update
     void Start()
@@ -17,15 +18,15 @@ public class ShootandHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (health >= 125)
+        if (health >= 100)
         {
             GameOver();
         }
-        else if (health >= 67)
+        else if (health >= 66)
         {
             currentWeap = 0;
         }
-        else if (health >= 34)
+        else if (health >= 33)
         {
             currentWeap = 1;
         }
@@ -38,7 +39,12 @@ public class ShootandHealth : MonoBehaviour
         {
             Attack();
         }
-        health -= 1;
+        tick += 1;
+        if (tick >= 60)
+        {
+            health -= 1;
+            tick = 0;
+        }
         Debug.Log("shootandhealth update");
     }
 
