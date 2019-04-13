@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class Poison : MonoBehaviour
 {
-    public int MaxHealth = 125;
-    public int curHealth = 100;
-    public float healthBarLength;
-
     public bool isPoisoned = false;
     bool poisonEffect = true;
     public int poisonDamage = 5;
 
     public float poisonTimer;
+
+    public GameObject theplayer;
+    ShootandHealth playerScript;
 
     private void Awake()
     {
@@ -21,13 +20,13 @@ public class Poison : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        playerScript = theplayer.GetComponent<ShootandHealth>();
     }
     IEnumerator PoisonDamage ()
     {
         if (poisonEffect)
         {
-            curHealth -= poisonDamage;
+            playerScript.health -= poisonDamage;
             poisonEffect = false;
             yield return new WaitForSeconds(poisonTimer);
             poisonEffect = true;
