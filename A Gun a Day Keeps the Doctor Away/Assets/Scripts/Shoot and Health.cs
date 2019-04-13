@@ -6,9 +6,10 @@ using UnityEngine.UI;
 public class ShootandHealth : MonoBehaviour
 {
     public int health = 100;
-    public string currentWeap = 0;
+    public int currentWeap = 0;
     public int range = 10;
-    public int weapDamage = 20;
+    //public float velY = 5f;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -46,17 +47,14 @@ public class ShootandHealth : MonoBehaviour
         if (currentWeap == 0)
         {
             range = 10;
-            weapDamage = 20;
         }
         else if (currentWeap == 1)
         {
             range = 30;
-            weapDamage = 20;
         }
         else
         {
             range = 50;
-            weapDamage = 20;
         }
     }
 
