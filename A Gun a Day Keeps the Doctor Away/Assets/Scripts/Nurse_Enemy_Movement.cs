@@ -4,22 +4,32 @@ using UnityEngine;
 
 public class Nurse_Enemy_Movement : MonoBehaviour
 {
+    //Nurse Movement Varibles
     public float speed;
     public float stoppingDistance;
     private Transform target;
 
+    //Score Variables
     public static int score;
     public string text;
 
-
+    //Nurse Health Values + Score
     public int NurseMaxHealth = 50;
     public int NurseCurHealth;
     public int scoreValue = 10;
+
+    //Nurse Death + Animiation?
     bool isDead;
     public AudioClip nurseDeath;
-
     Animator anim;
     AudioSource NurseAudio;
+
+    //Attack Variables
+    public float attackRange;
+    public int damage;
+    private float lastAttackTime;
+    public float attackDelay;
+
 
     void Awake()
     {
@@ -71,6 +81,20 @@ public class Nurse_Enemy_Movement : MonoBehaviour
             transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
         }
         //Still need to add the aditional score portion
+
+        //Attack? Checking Distance between Player and Nurse
+        float distanceToPlayer = Vector3.Distance(transform.position, target.position);
+        if (distanceToPlayer < attackRange)
+        {
+            //check if enough time has passed since last attack
+            if (Time.time > lastAttackTime + attackDelay)
+            {
+                target.SendMessage("TakeDamage");
+                //Record Time Attacked
+                lastAttackTime = Time.deltaTime;
+            }
+        }
+
     }
 
 
