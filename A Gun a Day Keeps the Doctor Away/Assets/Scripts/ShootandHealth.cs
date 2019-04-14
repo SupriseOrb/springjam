@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 public class ShootandHealth : MonoBehaviour
 {
-    private Rigidbody2D rb2D;
+    public Rigidbody2D rb2D;
     static int statichealth = 85;
     public int health = 67;
     public int currentWeap = 0;
@@ -40,7 +40,7 @@ public class ShootandHealth : MonoBehaviour
         //health = 85;
         sr = GetComponent<SpriteRenderer>();
         lasthit = Time.time;
-        rb2D = gameObject.AddComponent<Rigidbody2D>();
+        //rb2D = gameObject.AddComponent<Rigidbody2D>();
     }
     void Awake()
     {
@@ -50,7 +50,7 @@ public class ShootandHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(health);
+       // Debug.Log(health);
         if (health >= 100 || health <= 0)
         {
             if (health >= 100)
@@ -182,7 +182,7 @@ public class ShootandHealth : MonoBehaviour
             bullet5.transform.Translate(0, 0.4f, 0);
             //transform.Translate(0, -1 * 150 * Time.deltaTime, 0);
             //StartCoroutine("shotgun");
-            StartCoroutine(Knockback());
+            rb2D.AddForce(-transform.up * 2000);
             //Vector3.MoveTowards(transform.position, new Vector3(transform.position.x, transform.position.y - 150, transform.position.z), 150);
             //if (reloadtime <= shotgunrate)
             //{
@@ -209,9 +209,9 @@ public class ShootandHealth : MonoBehaviour
             bullet6.transform.Translate(0, 0.4f, 0);
             bullet7.transform.Rotate(Vector3.forward * (-3));
             bullet7.transform.Translate(0, 0.4f, 0);
-            transform.Translate(0, -1 * 10*Time.deltaTime, 0);
-            
-
+            //transform.Translate(0, -1 * 10*Time.deltaTime, 0);
+            //rb2D.AddForce(-transform.forward * 100);
+            StartCoroutine(Knockback());
             //bullet7.transform.position.x -= 2;
         }
         //Instantiate(bullet, transform.position, transform.rotation);
@@ -220,20 +220,20 @@ public class ShootandHealth : MonoBehaviour
 
     void GameOver()
     {
-        Debug.Log("gameover");
+        //Debug.Log("gameover");
         SceneManager.LoadScene(2);
     }
 
     public IEnumerator Knockback()
     {
 
-        float timer = 0;
+      
 
-        for (int i = 50; i > 0; i--)
-        {
-            transform.Translate(0, -0.005f , 0);
+      
+
+            rb2D.AddForce(-transform.up * 300);
             //yield return new WaitForSeconds(0.000000005f);
-        }
+        
 
         yield return 0;
 

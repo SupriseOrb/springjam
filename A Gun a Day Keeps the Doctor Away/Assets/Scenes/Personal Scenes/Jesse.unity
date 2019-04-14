@@ -234,7 +234,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 41804320}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.43, y: 3.645, z: 0.0575072}
+  m_LocalPosition: {x: 4.38, y: 3.645, z: 0.0575072}
   m_LocalScale: {x: 0.2810725, y: 0.055709146, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1386,7 +1386,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1269929197}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.4, y: 3.8, z: 0.0575072}
+  m_LocalPosition: {x: -2.29, y: 3.8, z: 0.0575072}
   m_LocalScale: {x: 0.082289994, y: 0.23691, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -16830,7 +16830,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1851699099}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.36, y: -3.7, z: 0.0575072}
+  m_LocalPosition: {x: 2.32, y: -3.7, z: 0.0575072}
   m_LocalScale: {x: 0.5489697, y: 0.07320519, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -17612,6 +17612,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 775341ebc2acc15438034b03183eece2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rb2D: {fileID: 6384554002255733573}
   health: 32
   currentWeap: 0
   range: 10
@@ -17962,7 +17963,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &8233025417161151312
 MonoBehaviour:
   m_ObjectHideFlags: 0
