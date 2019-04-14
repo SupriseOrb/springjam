@@ -1797,7 +1797,7 @@ MonoBehaviour:
   lowhp: {fileID: 21300000, guid: 348488b06c05c4a4d80c3353d4d0ef8a, type: 3}
   medhp: {fileID: 21300000, guid: 9cd7e7e8484751c42a8ee15a3571aa6b, type: 3}
   hihp: {fileID: 21300000, guid: d6c0bdf97a1900f47baa71d9eedae30d, type: 3}
-  gamecontroller: {fileID: 0}
+  gamecontroller: {fileID: 8233025417161151317}
 --- !u!82 &3130779387449667321
 AudioSource:
   m_ObjectHideFlags: 0
