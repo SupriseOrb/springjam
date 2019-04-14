@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class HealthBar : MonoBehaviour
 {
-    public int health;
-
+    static public int health;
+    static int statichealth = 85;
     public GameObject theplayer;
     ShootandHealth playerScript;
 
@@ -14,12 +14,18 @@ public class HealthBar : MonoBehaviour
     void Start()
     {
         playerScript = theplayer.GetComponent<ShootandHealth>();
-        health = playerScript.health;
+        health = 85;
+    }
+    void Awake()
+    {
+        health = 85;
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        //playerScript = theplayer.GetComponent<ShootandHealth>();
         health = playerScript.health;
     }
     private void OnGUI()

@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 public class ShootandHealth : MonoBehaviour
 {
+    static int statichealth = 85;
     public int health = 85;
     public int currentWeap = 0;
     public int range = 10;
@@ -15,30 +16,43 @@ public class ShootandHealth : MonoBehaviour
     public float gatlingrate;
     public float reloadtime;
 
+    public Sprite lowhp;
+    public Sprite medhp;
+    public Sprite hihp;
+    SpriteRenderer sr;
     // Start is called before the first frame update
     void Start()
     {
+        //health = 85;
+        sr = GetComponent<SpriteRenderer>();
     }
-    
+    void Awake()
+    {
+        //health = statichealth;
+    }
+
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(transform.rotation);
-        if (health >= 100)
+        Debug.Log(health);
+        if (health >= 100 || health <= 0)
         {
-            GameOver();
+            //GameOver();
         }
-        else if (health >= 66)
+        else if (health <= 100 && health >= 66)
+        {
+            currentWeap = 0;
+            sr.sprite = hihp;
+        }
+        else if (health <= 65 && health >= 33)
         {
             currentWeap = 1;
+            sr.sprite = medhp;
         }
-        else if (health >= 33)
+        else if (health <= 32 && health >= 0)
         {
-            currentWeap = 1;
-        }
-        else
-        {
-            currentWeap = 1;
+            currentWeap = 2;
+            sr.sprite = lowhp;
         }
 
         if (Input.GetKey(KeyCode.Space))
@@ -52,7 +66,7 @@ public class ShootandHealth : MonoBehaviour
             tick = 0;
         }
         reloadtime += Time.deltaTime;
-        Debug.Log("shootandhealth update");
+        //Debug.Log("shootandhealth update");
     }
 
     void Attack()
@@ -114,7 +128,7 @@ public class ShootandHealth : MonoBehaviour
 
     void GameOver()
     {
-        Debug.Log("Game Over");
+        SceneManager.LoadScene(0);
     }
 
 

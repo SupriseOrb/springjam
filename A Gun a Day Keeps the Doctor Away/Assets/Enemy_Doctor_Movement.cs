@@ -33,11 +33,12 @@ public class Enemy_Doctor_Movement : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+        theplayer = GameObject.Find("Player");
         waitTime = StaticWaitTime;
         target = GameObject.FindWithTag("Player").GetComponent<Transform>();
-        speed = 1;
-        attackDelay = 2;
-        attackRange = 3;
+        //speed = 1;
+        //attackDelay = 2;
+        //attackRange = 3;
         healthScript = theplayer.GetComponent<ShootandHealth>();
         scoreScript = gamecontroller.GetComponent<Scoring>();
     }

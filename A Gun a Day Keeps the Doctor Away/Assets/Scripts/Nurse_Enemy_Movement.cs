@@ -41,6 +41,7 @@ public class Nurse_Enemy_Movement : MonoBehaviour
 
     void Awake()
     {
+        theplayer = GameObject.Find("Player");
         target = GameObject.FindWithTag("Player").GetComponent<Transform>();
         anim = GetComponent<Animator>();
         NurseAudio = GetComponent<AudioSource>();
@@ -48,7 +49,7 @@ public class Nurse_Enemy_Movement : MonoBehaviour
 
         speed = 1;
         attackDelay = 2;
-        attackRange = 3;
+        //attackRange = 3;
 
     }
     // Start is called before the first frame update
@@ -103,7 +104,7 @@ public class Nurse_Enemy_Movement : MonoBehaviour
             if (Time.time > lastAttackTime + attackDelay)
             {
                 //target.SendMessage("Player Take Damage");
-                healthScript.health += 10;
+                healthScript.health += damage;
                 //Record Time Attacked
                 lastAttackTime = Time.time;
             }
