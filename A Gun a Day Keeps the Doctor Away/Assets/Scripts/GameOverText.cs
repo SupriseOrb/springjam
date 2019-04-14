@@ -18,7 +18,7 @@ public class GameOverText : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        scoreobj = GameObject.Find("Score");
+        scoreobj = GameObject.Find("ScoreControl");
         scoreScript = scoreobj.GetComponent<Scoring>();
         Debug.Log(scoreScript);
         if (scoreScript.ranOutOfHealth == true)
