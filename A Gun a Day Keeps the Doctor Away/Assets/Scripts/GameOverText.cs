@@ -30,13 +30,17 @@ public class GameOverText : MonoBehaviour
             {
                 overtext.text += "That's a lot of money! You think you could make more?";
             }
-            else if (Scoring.score < 4000)
+            else if (Scoring.score < 5008)
             {
                 overtext.text += "Your insurance company is definitely regretting this! Do you think you can go higher?";
             }
+            else if (Scoring.score < 9000)
+            {
+                overtext.text += "Wow... You actually beat one of us. Good Job! Now, can you go any higher?";
+            }
             else
             {
-                overtext.text += "You definitely cheated";
+                overtext.text += "You definitely cheated.";
             }
         }
         if (Scoring.ranOutOfHealth == true)
@@ -51,9 +55,13 @@ public class GameOverText : MonoBehaviour
             {
                 overtext.text += "It was a lot but you could always make it back with another try!";
             }
-            else
+            else if (Scoring.score < 5008)
             {
                 overtext.text += "Your insurance company dodged a bullet there. You need to live to cash out!";
+            }
+            else
+            {
+                overtext.text += "You actually beat one of us! Too bad you need to live to actually have your score count.";
             }
         }
     }
