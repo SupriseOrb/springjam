@@ -6,28 +6,24 @@ using UnityEngine.SceneManagement;
 public class GameOverText : MonoBehaviour
 {
     private Text overtext;
-    public GameObject scoreobj;
-    Scoring scoreScript;
     // Start is called before the first frame update
     void Start()
     {
-        overtext = gameObject.GetComponent<Text>();
-        scoreScript = scoreobj.GetComponent<Scoring>();
+        Debug.Log(Scoring.ranOutOfHealth);
+        overtext = this.GetComponent<Text>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        scoreobj = GameObject.Find("ScoreControl");
-        scoreScript = scoreobj.GetComponent<Scoring>();
-        Debug.Log(scoreScript);
-        if (scoreScript.ranOutOfHealth == true)
+        Debug.Log(overtext);
+        if (Scoring.ranOutOfHealth == true)
         {
-            overtext.text = "Daddy Riley lives! Here's how much you helped him make: \n" + Scoring.score.ToString();
+            overtext.text = "Daddy Riley lives! Here's how much you helped him make: \n$" + Scoring.score.ToString() + "k";
         }
-        if (scoreScript.ranOutOfHealth == false)
+        if (Scoring.ranOutOfHealth == false)
         {
-            overtext.text = "You didn't keep Daddy Riley alive! You can't cash out your: \n" + Scoring.score.ToString();
+            overtext.text = "You didn't keep Daddy Riley alive! You can't cash out your: \n$" + Scoring.score.ToString() + "k";
         }
     }
 }

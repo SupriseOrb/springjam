@@ -33,15 +33,12 @@ public class ShootandHealth : MonoBehaviour
     SpriteRenderer sr;
     float nextSoundTime = 0;
 
-    public GameObject gamecontroller;
-    Scoring scoreScript;
 
     // Start is called before the first frame update
     void Start()
     {
         //health = 85;
         sr = GetComponent<SpriteRenderer>();
-        scoreScript = gamecontroller.GetComponent<Scoring>();
         lasthit = Time.time;
         rb2D = gameObject.AddComponent<Rigidbody2D>();
     }
@@ -58,11 +55,11 @@ public class ShootandHealth : MonoBehaviour
         {
             if (health >= 100)
             {
-                scoreScript.ranOutOfHealth = true;
+                Scoring.ranOutOfHealth = true;
             }
             else
             {
-                scoreScript.ranOutOfHealth = false;
+                Scoring.ranOutOfHealth = false;
             }
             GameOver();
         }

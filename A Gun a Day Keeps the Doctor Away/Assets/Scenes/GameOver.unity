@@ -147,8 +147,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0000076294, y: 27}
-  m_SizeDelta: {x: 325.1, y: 148.2}
+  m_AnchoredPosition: {x: 0, y: 27}
+  m_SizeDelta: {x: 391, y: 148.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &233520222
 MonoBehaviour:
@@ -172,7 +172,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 60800cada9ccd0a438d6b3076b26bc8e, type: 3}
-    m_FontSize: 18
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -204,7 +204,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb2b388db0f6955428c733dc0fb25a4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreobj: {fileID: 0}
 --- !u!1 &270915771
 GameObject:
   m_ObjectHideFlags: 0
