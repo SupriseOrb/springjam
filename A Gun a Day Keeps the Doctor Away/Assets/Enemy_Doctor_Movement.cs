@@ -35,7 +35,7 @@ public class Enemy_Doctor_Movement : MonoBehaviour
     {
         theplayer = GameObject.Find("Player");
         waitTime = StaticWaitTime;
-        target = GameObject.FindWithTag("Player").GetComponent<Transform>();
+        target = theplayer.GetComponent<Transform>();
         //speed = 1;
         //attackDelay = 2;
         //attackRange = 3;
@@ -46,11 +46,13 @@ public class Enemy_Doctor_Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         //chase coding
-        if (Vector2.Distance(transform.position, target.position) > stoppingDistance)
-        {
-            transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
-        }
+        //if (Vector2.Distance(transform.position, target.position) > stoppingDistance)
+        //{
+            //transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+        //    transform.Translate(0, speed * Time.deltaTime, 0);
+        //}
 
         if (DashTime == StaticDashTime)
         {
@@ -59,6 +61,7 @@ public class Enemy_Doctor_Movement : MonoBehaviour
 
         if (DashTime > 0)
         {
+
             if (Vector2.Distance(transform.position, target.position) > stoppingDistance)
             {
                 transform.position = Vector2.MoveTowards(transform.position, TargetPosition, speed * Time.deltaTime);
@@ -78,6 +81,9 @@ public class Enemy_Doctor_Movement : MonoBehaviour
             {
             DashTime = StaticDashTime;
             waitTime = StaticWaitTime;
+                Vector3 dir = theplayer.transform.position - transform.position;
+                float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+                transform.rotation = Quaternion.AngleAxis(angle - 90, Vector3.forward);
             }
         }
 

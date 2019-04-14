@@ -42,7 +42,7 @@ public class Nurse_Enemy_Movement : MonoBehaviour
     void Awake()
     {
         theplayer = GameObject.Find("Player");
-        target = GameObject.FindWithTag("Player").GetComponent<Transform>();
+        target = theplayer.GetComponent<Transform>();
         anim = GetComponent<Animator>();
         NurseAudio = GetComponent<AudioSource>();
         NurseCurHealth = NurseMaxHealth;
@@ -67,6 +67,7 @@ public class Nurse_Enemy_Movement : MonoBehaviour
     }
     public void TakeDamage (int amount, Vector3 hitpoint)
     {
+        transform.LookAt(target);
         if (isDead)
         {
             return;
@@ -89,9 +90,14 @@ public class Nurse_Enemy_Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Vector3 dir = theplayer.transform.position - transform.position;
+        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.AngleAxis(angle - 90, Vector3.forward);
         //chase coding
         if (Vector2.Distance(transform.position, target.position) > stoppingDistance)
         {
+
+            //transform.LookAt(target);
             transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
         }
         //Still need to add the aditional score portion
