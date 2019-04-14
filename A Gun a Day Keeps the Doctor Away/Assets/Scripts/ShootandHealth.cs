@@ -55,11 +55,11 @@ public class ShootandHealth : MonoBehaviour
         {
             if (health >= 100)
             {
-                Scoring.ranOutOfHealth = true;
+                Scoring.ranOutOfHealth = false;
             }
             else
             {
-                Scoring.ranOutOfHealth = false;
+                Scoring.ranOutOfHealth = true;
             }
             GameOver();
         }

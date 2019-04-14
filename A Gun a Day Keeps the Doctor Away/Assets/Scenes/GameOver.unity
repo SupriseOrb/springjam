@@ -243,6 +243,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb2b388db0f6955428c733dc0fb25a4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  loseP: {fileID: 963544848}
+  winP: {fileID: 1729018219}
 --- !u!1 &270915771
 GameObject:
   m_ObjectHideFlags: 0
@@ -457,6 +459,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea4970752afd45041b32f6b2438f336b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  winP: {fileID: 0}
+  loseP: {fileID: 0}
 --- !u!114 &618025386
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -759,7 +763,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &963544849
 RectTransform:
   m_ObjectHideFlags: 0
@@ -895,6 +899,7 @@ GameObject:
   - component: {fileID: 1368387145}
   - component: {fileID: 1368387144}
   - component: {fileID: 1368387143}
+  - component: {fileID: 1368387146}
   m_Layer: 5
   m_Name: Main Menu
   m_TagString: Untagged
@@ -1012,6 +1017,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1368387141}
   m_CullTransparentMesh: 0
+--- !u!114 &1368387146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1368387141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b1b7e1194488834d94ae722eb8d5c81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound: {fileID: 8300000, guid: d79aafbc115338b4aafe1591d2e628a8, type: 3}
 --- !u!1 &1628617636
 GameObject:
   m_ObjectHideFlags: 0

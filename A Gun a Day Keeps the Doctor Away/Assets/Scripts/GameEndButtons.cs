@@ -5,20 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class GameEndButtons : MonoBehaviour
 {
+    public GameObject winP;
+    public GameObject loseP;
     // Start is called before the first frame update
     void Start()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void MainMenu()
     {
+        winP.gameObject.SetActive(false);
+        loseP.gameObject.SetActive(false);
         SceneManager.LoadScene(0);
     }
 

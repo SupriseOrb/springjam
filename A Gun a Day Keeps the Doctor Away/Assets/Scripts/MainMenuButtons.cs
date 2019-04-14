@@ -12,7 +12,7 @@ public class MainMenuButtons : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Scoring.score = 0;
     }
 
     public void PlayGame()
