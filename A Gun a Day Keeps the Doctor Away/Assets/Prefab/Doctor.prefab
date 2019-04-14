@@ -94,13 +94,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f579118c292f3848bb2de2775b39881, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 16
+  speed: 7
   stoppingDistance: 2
   StaticDashTime: 2
   canDocDash: 1
   StaticWaitTime: 2
   savedVelocity: {x: 0, y: 0}
-  attackRange: 50
+  attackRange: 3
   damage: 15
   attackDelay: 2
   theplayer: {fileID: 0}

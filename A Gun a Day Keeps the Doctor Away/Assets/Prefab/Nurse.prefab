@@ -101,7 +101,7 @@ MonoBehaviour:
   NurseCurHealth: 0
   scoreValue: 10
   nurseDeath: {fileID: 0}
-  attackRange: 50
+  attackRange: 3
   damage: 10
   attackDelay: 2
   theplayer: {fileID: 0}
