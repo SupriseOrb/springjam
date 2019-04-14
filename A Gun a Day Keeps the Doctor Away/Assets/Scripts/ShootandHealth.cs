@@ -156,8 +156,9 @@ public class ShootandHealth : MonoBehaviour
         if (currentWeap == 0 && reloadtime >= pistolrate)
         {
             pistolshoot.Play();
-            Instantiate(bullet, transform.position, transform.rotation);
-                reloadtime = 0;
+            GameObject pbullet = Instantiate(bullet, transform.position, transform.rotation);
+            pbullet.transform.Translate(0, 0.4f, 0);
+            reloadtime = 0;
             
 //            range = 10;
         }
@@ -166,14 +167,19 @@ public class ShootandHealth : MonoBehaviour
         {
             shotgunshoot.Play();
             GameObject bullet1 = Instantiate(bullet, transform.position, transform.rotation);
+            bullet1.transform.Translate(0, 0.4f, 0);
             GameObject bullet2 = Instantiate(bullet, transform.position, transform.rotation);
             bullet2.transform.Rotate(Vector3.forward * 10);
+            bullet2.transform.Translate(0, 0.4f, 0);
             GameObject bullet3 = Instantiate(bullet, transform.position, transform.rotation);
             bullet3.transform.Rotate(Vector3.forward * 5);
+            bullet3.transform.Translate(0, 0.4f, 0);
             GameObject bullet4 = Instantiate(bullet, transform.position, transform.rotation);
             bullet4.transform.Rotate(Vector3.forward * (-10));
+            bullet4.transform.Translate(0, 0.4f, 0);
             GameObject bullet5 = Instantiate(bullet, transform.position, transform.rotation);
             bullet5.transform.Rotate(Vector3.forward * (-5));
+            bullet5.transform.Translate(0, 0.4f, 0);
             //transform.Translate(0, -1 * 150 * Time.deltaTime, 0);
             //StartCoroutine("shotgun");
             StartCoroutine(Knockback());
@@ -198,8 +204,11 @@ public class ShootandHealth : MonoBehaviour
             GameObject bullet6 = Instantiate(bullet, transform.position, transform.rotation);
             GameObject bullet7 = Instantiate(bullet, transform.position, transform.rotation);
             GameObject bullet8 = Instantiate(bullet, transform.position, transform.rotation);
+            bullet8.transform.Translate(0, 0.4f, 0);
             bullet6.transform.Rotate(Vector3.forward * 3);
-                bullet7.transform.Rotate(Vector3.forward * (-3));
+            bullet6.transform.Translate(0, 0.4f, 0);
+            bullet7.transform.Rotate(Vector3.forward * (-3));
+            bullet7.transform.Translate(0, 0.4f, 0);
             transform.Translate(0, -1 * 10*Time.deltaTime, 0);
             
 
