@@ -2070,7 +2070,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 3.5354004
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
@@ -2321,7 +2321,7 @@ MonoBehaviour:
 
     D - Rotate Right
 
-    Right Click - Attack'
+    Space - Fire'
 --- !u!222 &2084418912
 CanvasRenderer:
   m_ObjectHideFlags: 0
