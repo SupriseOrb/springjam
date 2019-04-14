@@ -8,7 +8,7 @@ public class Scoring : MonoBehaviour
 {
 
     public GameObject theplayer;
-    public float score = 0;
+    static public float score = 0;
     int sceneNum;
     public bool ranOutOfHealth;
     // Start is called before the first frame update
@@ -26,7 +26,7 @@ public class Scoring : MonoBehaviour
         //GUI.Label(new Rect(10, 10, 100, 50), "Insurance: -$" + score.ToString() + "k", scoreStyle);
     }
 
-    private void OnGUI()
+    void OnGUI()
     {
         //Score display
         if (sceneNum == 1 || sceneNum == 4)
@@ -35,6 +35,7 @@ public class Scoring : MonoBehaviour
             scoreStyle.fontSize = 30;
             scoreStyle.normal.textColor = Color.white;
             GUI.Label(new Rect(10, 10, 100, 50), "Insurance: -$" + score.ToString() + "k", scoreStyle);
+          
         }
     }
 }

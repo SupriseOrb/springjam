@@ -76,7 +76,7 @@ public class Nurse_Enemy_Movement : MonoBehaviour
         NurseCurHealth -= amount;
         if(NurseCurHealth <= 0)
         {
-            scoreScript.score += 65;
+            Scoring.score += 65;
             NurseDead();
         }
     }

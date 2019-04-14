@@ -316,6 +316,100 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &558135086
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8233025417720199173, guid: e1f8431c8c481424797ece3201ed16e8,
+        type: 3}
+      propertyPath: m_Name
+      value: GameControls (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8233025417720199170, guid: e1f8431c8c481424797ece3201ed16e8,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.51
+      objectReference: {fileID: 0}
+    - target: {fileID: 8233025417720199170, guid: e1f8431c8c481424797ece3201ed16e8,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6.29
+      objectReference: {fileID: 0}
+    - target: {fileID: 8233025417720199170, guid: e1f8431c8c481424797ece3201ed16e8,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8233025417720199170, guid: e1f8431c8c481424797ece3201ed16e8,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8233025417720199170, guid: e1f8431c8c481424797ece3201ed16e8,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8233025417720199170, guid: e1f8431c8c481424797ece3201ed16e8,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8233025417720199170, guid: e1f8431c8c481424797ece3201ed16e8,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8233025417720199170, guid: e1f8431c8c481424797ece3201ed16e8,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 8233025417720199170, guid: e1f8431c8c481424797ece3201ed16e8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8233025417720199170, guid: e1f8431c8c481424797ece3201ed16e8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8233025417720199170, guid: e1f8431c8c481424797ece3201ed16e8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8233025417720199171, guid: e1f8431c8c481424797ece3201ed16e8,
+        type: 3}
+      propertyPath: theplayer
+      value: 
+      objectReference: {fileID: 3130779387449667315}
+    - target: {fileID: 8233025417720199172, guid: e1f8431c8c481424797ece3201ed16e8,
+        type: 3}
+      propertyPath: theplayer
+      value: 
+      objectReference: {fileID: 3130779387449667315}
+    - target: {fileID: 8233025417720199172, guid: e1f8431c8c481424797ece3201ed16e8,
+        type: 3}
+      propertyPath: score
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8233025417720199169, guid: e1f8431c8c481424797ece3201ed16e8,
+        type: 3}
+      propertyPath: theplayer
+      value: 
+      objectReference: {fileID: 3130779387449667315}
+    - target: {fileID: 8233025417720199168, guid: e1f8431c8c481424797ece3201ed16e8,
+        type: 3}
+      propertyPath: theplayer
+      value: 
+      objectReference: {fileID: 3130779387449667315}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e1f8431c8c481424797ece3201ed16e8, type: 3}
 --- !u!1 &607660634
 GameObject:
   m_ObjectHideFlags: 0
@@ -936,7 +1030,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c966a594ecb8c84ca118f6dad463d2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 0
+  theplayer: {fileID: 0}
   ranOutOfHealth: 0
 --- !u!4 &1310931498
 Transform:
@@ -2172,7 +2266,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   theplayer: {fileID: 3130779387449667315}
   health: 0
-  enemy: {fileID: 6334359574212360981, guid: 16a9db443b90ce94c9025181fa727249, type: 3}
+  enemy: {fileID: 3793000651907593659, guid: 16a9db443b90ce94c9025181fa727249, type: 3}
   spawnTime: 3
   spawnPoints:
   - {fileID: 533153692175230677, guid: 1c161c345db17df4f999145d5c2fcef9, type: 3}
@@ -2190,7 +2284,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   theplayer: {fileID: 3130779387449667315}
   health: 0
-  enemy: {fileID: 5872761137976079010, guid: e3bd1ce7026b7f94a9104a85269d458e, type: 3}
+  enemy: {fileID: 3893701273253288651, guid: e3bd1ce7026b7f94a9104a85269d458e, type: 3}
   spawnTime: 3
   spawnPoints:
   - {fileID: 2694332107438591208, guid: 288dbd956c872934488a3c40cda83db6, type: 3}
@@ -2239,4 +2333,4 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
