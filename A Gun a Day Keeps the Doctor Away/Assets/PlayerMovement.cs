@@ -7,6 +7,12 @@ public class PlayerMovement : MonoBehaviour
     public float playerSpeed;
     public float turnSpeed;
     public Rigidbody2D rb2D;
+    Rigidbody2D body;
+    float horizontal;
+    float vertical;
+    float movementLimiter = 0.7f;
+
+    public float runSpeed = 20.0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,9 +22,30 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        MoveForward();
-        TurnRightAndLeft();
+        //MoveForward();
+        faceMouse();
+        horizontal = Input.GetAxisRaw("Horizontal");
+        vertical = Input.GetAxisRaw("Vertical");
+        if (horizontal != 0 && vertical != 0)
+        {
+            horizontal *= movementLimiter;
+            vertical *= movementLimiter;
+        }
+        rb2D.velocity = new Vector2(horizontal * runSpeed, vertical * runSpeed);
     }
+    void faceMouse()
+    {
+        Vector3 mousePosition = Input.mousePosition;
+        mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
+
+        Vector2 direction = new Vector2(
+            mousePosition.x - transform.position.x,
+            mousePosition.y - transform.position.y
+            );
+        transform.up = direction;
+    }
+
+
 
     void MoveForward()
     {

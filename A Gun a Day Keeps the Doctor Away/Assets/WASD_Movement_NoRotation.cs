@@ -25,6 +25,7 @@ public class WASD_Movement_NoRotation : MonoBehaviour
         horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxisRaw("Vertical");
 
+
     }
 
     private void FixedUpdate()

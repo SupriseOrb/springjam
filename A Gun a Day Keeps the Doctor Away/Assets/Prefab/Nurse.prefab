@@ -104,7 +104,7 @@ MonoBehaviour:
   nurseDeath: {fileID: 0}
   anim: {fileID: 6078619705167713360}
   attackRange: 1
-  damage: 10
+  damage: 3
   attackDelay: 2
   theplayer: {fileID: 0}
   gamecontroller: {fileID: 8233025417720199173, guid: e1f8431c8c481424797ece3201ed16e8,

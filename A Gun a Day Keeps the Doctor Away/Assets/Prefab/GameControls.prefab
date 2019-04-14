@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 8233025417720199172}
   - component: {fileID: 8233025417720199169}
   - component: {fileID: 8233025417720199168}
+  - component: {fileID: 7021771573589234288}
+  - component: {fileID: 5455558909746127390}
   m_Layer: 0
   m_Name: GameControls
   m_TagString: Untagged
@@ -60,9 +62,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c966a594ecb8c84ca118f6dad463d2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  theplayer: {fileID: 0}
-  score: 0
-  ranOutOfHealth: 0
 --- !u!114 &8233025417720199169
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -101,3 +100,41 @@ MonoBehaviour:
   spawnTime: 3
   spawnPoints:
   - {fileID: 533153692175230677, guid: 1c161c345db17df4f999145d5c2fcef9, type: 3}
+--- !u!114 &7021771573589234288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8233025417720199173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec735c4ff61e2b54c84a2258fd6d0f1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemies:
+  - {fileID: 3793000651907593659, guid: 16a9db443b90ce94c9025181fa727249, type: 3}
+  maxPos: 2.5
+  spawnInterval: 3
+  currentSpawnTime: 0
+  midCountdown: 15
+  currentCountdownTime: 0
+--- !u!114 &5455558909746127390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8233025417720199173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec735c4ff61e2b54c84a2258fd6d0f1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemies:
+  - {fileID: 3893701273253288651, guid: e3bd1ce7026b7f94a9104a85269d458e, type: 3}
+  maxPos: 2.5
+  spawnInterval: 3
+  currentSpawnTime: 0
+  midCountdown: 15
+  currentCountdownTime: 0
