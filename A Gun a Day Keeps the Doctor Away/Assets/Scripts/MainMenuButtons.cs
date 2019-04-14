@@ -9,6 +9,7 @@ public class MainMenuButtons : MonoBehaviour
 {
     public GameObject instructionP;
     public GameObject creditsP;
+    static public bool buttonPressed = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,9 +23,7 @@ public class MainMenuButtons : MonoBehaviour
 
     public void Instructions()
     {
-        //SceneManager.LoadScene(2);
         instructionP.gameObject.SetActive(true);
-
     }
 
     public void QuitGame()
@@ -34,13 +33,14 @@ public class MainMenuButtons : MonoBehaviour
 
     public void Credits()
     {
-        //SceneManager.LoadScene(4);
         creditsP.gameObject.SetActive(true);
     }
 
     public void Back()
     {
+        buttonPressed = true;
         instructionP.gameObject.SetActive(false);
         creditsP.gameObject.SetActive(false);
     }
+
 }

@@ -20,6 +20,15 @@ public class MenuButtonSounds : MonoBehaviour
         button.onClick.AddListener(() => PlaySound());
     }
 
+    void Update()
+    {
+        if (MainMenuButtons.buttonPressed == true)
+        {
+            PlaySound();
+            MainMenuButtons.buttonPressed = false;
+        }
+    }
+
     void PlaySound()
     {
         source.PlayOneShot(sound);

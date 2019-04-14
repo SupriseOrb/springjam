@@ -459,8 +459,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea4970752afd45041b32f6b2438f336b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  winP: {fileID: 0}
-  loseP: {fileID: 0}
+  winP: {fileID: 1729018219}
+  loseP: {fileID: 963544848}
 --- !u!114 &618025386
 MonoBehaviour:
   m_ObjectHideFlags: 0
