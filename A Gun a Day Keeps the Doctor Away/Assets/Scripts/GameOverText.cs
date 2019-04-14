@@ -12,7 +12,7 @@ public class GameOverText : MonoBehaviour
     void Start()
     {
         overtext = gameObject.GetComponent<Text>();
-        
+        scoreScript = scoreobj.GetComponent<Scoring>();
     }
 
     // Update is called once per frame

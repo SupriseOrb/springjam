@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 public class ShootandHealth : MonoBehaviour
 {
-   
+    private Rigidbody2D rb2D;
     static int statichealth = 85;
     public int health = 67;
     public int currentWeap = 0;
@@ -43,6 +43,7 @@ public class ShootandHealth : MonoBehaviour
         sr = GetComponent<SpriteRenderer>();
         scoreScript = gamecontroller.GetComponent<Scoring>();
         lasthit = Time.time;
+        rb2D = gameObject.AddComponent<Rigidbody2D>();
     }
     void Awake()
     {
@@ -176,9 +177,10 @@ public class ShootandHealth : MonoBehaviour
             bullet4.transform.Rotate(Vector3.forward * (-10));
             GameObject bullet5 = Instantiate(bullet, transform.position, transform.rotation);
             bullet5.transform.Rotate(Vector3.forward * (-5));
-            transform.Translate(0, -1 * 150 * Time.deltaTime, 0);
+            //transform.Translate(0, -1 * 150 * Time.deltaTime, 0);
             //StartCoroutine("shotgun");
-
+            StartCoroutine(Knockback());
+            //Vector3.MoveTowards(transform.position, new Vector3(transform.position.x, transform.position.y - 150, transform.position.z), 150);
             //if (reloadtime <= shotgunrate)
             //{
 
@@ -201,8 +203,9 @@ public class ShootandHealth : MonoBehaviour
             GameObject bullet8 = Instantiate(bullet, transform.position, transform.rotation);
             bullet6.transform.Rotate(Vector3.forward * 3);
                 bullet7.transform.Rotate(Vector3.forward * (-3));
-            transform.Translate(0, -1 * 10 * Time.deltaTime, 0);
+            transform.Translate(0, -1 * 10*Time.deltaTime, 0);
             
+
             //bullet7.transform.position.x -= 2;
         }
         //Instantiate(bullet, transform.position, transform.rotation);
@@ -215,18 +218,19 @@ public class ShootandHealth : MonoBehaviour
         SceneManager.LoadScene(3);
     }
 
-
-    IEnumerator gat()
+    public IEnumerator Knockback()
     {
-        GameObject bullet1 = Instantiate(bullet, transform.position, transform.rotation);
-        GameObject bullet2 = Instantiate(bullet, transform.position, transform.rotation);
-        bullet2.transform.Rotate(Vector3.forward * 10);
-        GameObject bullet3 = Instantiate(bullet, transform.position, transform.rotation);
-        bullet3.transform.Rotate(Vector3.forward * 5);
-        GameObject bullet4 = Instantiate(bullet, transform.position, transform.rotation);
-        bullet4.transform.Rotate(Vector3.forward * (-10));
-        GameObject bullet5 = Instantiate(bullet, transform.position, transform.rotation);
-        bullet5.transform.Rotate(Vector3.forward * (-5));
-        yield return new WaitForSeconds(3);
+
+        float timer = 0;
+
+        for (int i = 50; i > 0; i--)
+        {
+            transform.Translate(0, -0.005f , 0);
+            //yield return new WaitForSeconds(0.000000005f);
+        }
+
+        yield return 0;
+
     }
+
 }
