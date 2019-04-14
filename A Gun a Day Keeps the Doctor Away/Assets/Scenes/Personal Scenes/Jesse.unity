@@ -633,7 +633,7 @@ Camera:
   far clip plane: 100
   field of view: 60
   orthographic: 1
-  orthographic size: 4
+  orthographic size: 5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -848,6 +848,7 @@ GameObject:
   - component: {fileID: 711930400}
   - component: {fileID: 711930399}
   - component: {fileID: 711930401}
+  - component: {fileID: 711930402}
   m_Layer: 0
   m_Name: InsuranceText
   m_TagString: Untagged
@@ -871,8 +872,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -39.470093, y: 8.784927}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -591, y: 477}
+  m_SizeDelta: {x: 702.4, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &711930399
 MonoBehaviour:
@@ -907,7 +908,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: Insurance
 --- !u!222 &711930400
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -931,6 +932,18 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_EffectDistance: {x: 2, y: -2}
   m_UseGraphicAlpha: 1
+--- !u!114 &711930402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 711930397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2edc2bf17884bb40975c469d5ed50cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &843012050
 GameObject:
   m_ObjectHideFlags: 0
@@ -942,6 +955,8 @@ GameObject:
   - component: {fileID: 843012051}
   - component: {fileID: 843012053}
   - component: {fileID: 843012052}
+  - component: {fileID: 843012055}
+  - component: {fileID: 843012054}
   m_Layer: 0
   m_Name: HealthText
   m_TagString: Untagged
@@ -965,8 +980,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -109, y: 103}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -702.2, y: 424}
+  m_SizeDelta: {x: 480, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &843012052
 MonoBehaviour:
@@ -981,7 +996,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1001,7 +1016,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: 'Health
+
+'
 --- !u!222 &843012053
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1010,6 +1027,34 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 843012050}
   m_CullTransparentMesh: 0
+--- !u!114 &843012054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 843012050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -900027084, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 2, y: -2}
+  m_UseGraphicAlpha: 1
+--- !u!114 &843012055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 843012050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c634dd08ab4a4e641ae520d9eb5d703b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theplayer: {fileID: 3130779387449667315}
 --- !u!1 &948169785
 GameObject:
   m_ObjectHideFlags: 0
