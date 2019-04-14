@@ -51,5 +51,11 @@ public class PlayerBullet : MonoBehaviour
             Destroy(other.gameObject);
             Destroy(gameObject);
         }
+        if (other.gameObject.tag == "Wall")
+        {
+             
+            Destroy(gameObject);
+        }
     }
+
 }

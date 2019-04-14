@@ -102,7 +102,7 @@ MonoBehaviour:
   NurseCurHealth: 0
   scoreValue: 10
   nurseDeath: {fileID: 0}
-  anim: {fileID: 0}
+  anim: {fileID: 6078619705167713360}
   attackRange: 1
   damage: 10
   attackDelay: 2

@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
     public float playerSpeed;
     public float turnSpeed;
+    public Rigidbody2D rb2D;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,11 +25,13 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKey("w"))//Press up arrow key to move forward on the Y AXIS
         {
-            transform.Translate(0, playerSpeed * Time.deltaTime, 0);
+            rb2D.AddForce(transform.up * playerSpeed, ForceMode2D.Force);
+            //transform.Translate(0, playerSpeed * Time.deltaTime, 0);
         }
         if (Input.GetKey("s"))//Press up arrow key to move forward on the Y AXIS
         {
-            transform.Translate(0, -1 * playerSpeed * Time.deltaTime, 0);
+            rb2D.AddForce(new Vector2(0, playerSpeed * Time.deltaTime * -1), ForceMode2D.Force);
+            //transform.Translate(0, -1 * playerSpeed * Time.deltaTime, 0);
         }
     }
 
