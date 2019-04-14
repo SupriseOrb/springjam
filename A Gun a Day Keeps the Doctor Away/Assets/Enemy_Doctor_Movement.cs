@@ -41,7 +41,7 @@ public class Enemy_Doctor_Movement : MonoBehaviour
         //attackRange = 3;
         healthScript = theplayer.GetComponent<ShootandHealth>();
         scoreScript = gamecontroller.GetComponent<Scoring>();
-        damage = 10;
+        
     }
 
     // Update is called once per frame

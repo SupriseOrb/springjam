@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 public class ShootandHealth : MonoBehaviour
 {
+   
     static int statichealth = 85;
     public int health = 67;
     public int currentWeap = 0;

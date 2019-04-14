@@ -94,13 +94,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1aa96e84ee32de54984fc5ad46ffef49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GameController: {fileID: 5292866623830183232, guid: 27f698f4f1a61424d92116a616edb800,
+    type: 3}
   speed: 30
   range: 5
-  SelfCollider: {fileID: 0}
-  NurseCollider: {fileID: 0}
-  DoctorCollider: {fileID: 0}
-  Nurse: {fileID: 0}
-  Doctor: {fileID: 0}
 --- !u!58 &6229010899145166705
 CircleCollider2D:
   m_ObjectHideFlags: 0

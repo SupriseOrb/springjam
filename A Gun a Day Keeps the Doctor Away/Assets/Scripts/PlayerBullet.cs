@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class PlayerBullet : MonoBehaviour
 {
+    public GameObject GameController;
+    Scoring scorescript;
     public float speed;
      float travelled = 0;
     public float range;
     // public GameObject theplayer;
     void Start()
     {
-  
+        scorescript = GameController.GetComponent<Scoring>();
     }
 
     private void Awake()
@@ -45,6 +47,7 @@ public class PlayerBullet : MonoBehaviour
     {
         if (other.gameObject.tag == "Enemy")
         {
+            scorescript.score += 10;
             Destroy(other.gameObject);
             Destroy(gameObject);
         }

@@ -6,7 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class Scoring : MonoBehaviour
 {
-    public float score = 0;
+
+    public GameObject theplayer;
+    static public float score = 0;
     int sceneNum;
     public bool ranOutOfHealth;
     // Start is called before the first frame update
@@ -21,6 +23,7 @@ public class Scoring : MonoBehaviour
     void Update()
     {
         //65 vs 443
+        GUI.Label(new Rect(10, 10, 100, 50), "Insurance: -$" + score.ToString() + "k", scoreStyle);
     }
 
     private void OnGUI()
