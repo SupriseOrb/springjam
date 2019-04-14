@@ -212,7 +212,7 @@ public class ShootandHealth : MonoBehaviour
     void GameOver()
     {
         Debug.Log("gameover");
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(2);
     }
 
     public IEnumerator Knockback()
