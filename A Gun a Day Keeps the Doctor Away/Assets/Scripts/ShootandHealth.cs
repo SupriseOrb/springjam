@@ -10,17 +10,22 @@ public class ShootandHealth : MonoBehaviour
     public int currentWeap = 0;
     public int range = 10;
     public int tick = 0; //tracks how many frames has passed to know when to decrease health again
+    private float lasthit;
+    public bool hit = false;
+
     public GameObject bullet;
     public float shotgunrate;
     public float pistolrate;
     public float gatlingrate;
     public float reloadtime;
+
     public AudioSource shotgunload;
     public AudioSource shotgunshoot;
     public AudioSource pistolload;
     public AudioSource pistolshoot;
     public AudioSource gatlingload;
     public AudioSource gatlingshoot;
+
     public Sprite lowhp;
     public Sprite medhp;
     public Sprite hihp;
@@ -32,6 +37,7 @@ public class ShootandHealth : MonoBehaviour
     {
         //health = 85;
         sr = GetComponent<SpriteRenderer>();
+        lasthit = Time.time;
     }
     void Awake()
     {
@@ -46,7 +52,7 @@ public class ShootandHealth : MonoBehaviour
         {
             GameOver();
         }
-        else if (health <= 100 && health >= 66)
+        else if (health < 100 && health >= 66)
         {
             if (health == 100)
             {
@@ -95,13 +101,7 @@ public class ShootandHealth : MonoBehaviour
                     gatlingload.Play();
                 }
             }
-            else if (health == 0)
-            {
-                if (gatlingload.isPlaying)
-                {
-                    gatlingload.Play();
-                }
-            }
+            
             currentWeap = 2;
             sr.sprite = lowhp;
      
@@ -111,10 +111,28 @@ public class ShootandHealth : MonoBehaviour
         {
             Attack();
         }
+
+        if (hit == true)
+        {
+            lasthit = Time.time;
+            hit = false;
+        }
+
         tick += 1;
         if (tick >= 60)
         {
-            health -= 1;
+            if (Time.time - lasthit < 5)
+            {
+                health -= 1;
+            }
+            else if (Time.time - lasthit < 10)
+            {
+                health -= 2;
+            }
+            else
+            {
+                health -= 3;
+            }
             tick = 0;
         }
         reloadtime += Time.deltaTime;

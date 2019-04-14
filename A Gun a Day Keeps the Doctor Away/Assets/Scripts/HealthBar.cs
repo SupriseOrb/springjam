@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class HealthBar : MonoBehaviour
 {
@@ -47,4 +48,6 @@ public class HealthBar : MonoBehaviour
         }
         GUI.Label(new Rect(10, 50, 100, 50), "Health: " + health.ToString(),healthStyle);
     }
+        
+    
 }
