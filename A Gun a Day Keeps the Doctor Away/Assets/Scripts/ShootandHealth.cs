@@ -32,11 +32,15 @@ public class ShootandHealth : MonoBehaviour
     SpriteRenderer sr;
     float nextSoundTime = 0;
 
+    public GameObject gamecontroller;
+    Scoring scoreScript;
+
     // Start is called before the first frame update
     void Start()
     {
         //health = 85;
         sr = GetComponent<SpriteRenderer>();
+        scoreScript = gamecontroller.GetComponent<Scoring>();
         lasthit = Time.time;
     }
     void Awake()
@@ -50,6 +54,14 @@ public class ShootandHealth : MonoBehaviour
         Debug.Log(health);
         if (health >= 100 || health <= 0)
         {
+            if (health >= 100)
+            {
+                scoreScript.ranOutOfHealth = true;
+            }
+            else
+            {
+                scoreScript.ranOutOfHealth = false;
+            }
             GameOver();
         }
         else if (health < 100 && health >= 66)
@@ -183,8 +195,8 @@ public class ShootandHealth : MonoBehaviour
                 gatlingshoot.Play();
                 nextSoundTime = Time.time + 0.1f;
             }
-                GameObject bullet6 = Instantiate(bullet, transform.position, transform.rotation);
-                GameObject bullet7 = Instantiate(bullet, transform.position, transform.rotation);
+            GameObject bullet6 = Instantiate(bullet, transform.position, transform.rotation);
+            GameObject bullet7 = Instantiate(bullet, transform.position, transform.rotation);
             GameObject bullet8 = Instantiate(bullet, transform.position, transform.rotation);
             bullet6.transform.Rotate(Vector3.forward * 3);
                 bullet7.transform.Rotate(Vector3.forward * (-3));
