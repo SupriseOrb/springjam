@@ -56,6 +56,11 @@ public class PlayerBullet : MonoBehaviour
              
             Destroy(gameObject);
         }
+        if (other.gameObject.tag == "Breakable")
+        {
+            Destroy(other.gameObject);
+            Destroy(gameObject);
+        }
     }
 
 }

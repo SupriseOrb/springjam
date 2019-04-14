@@ -19,17 +19,18 @@ public class GameOverText : MonoBehaviour
     {
         if (Scoring.ranOutOfHealth == false)
         {
+            
             winP.gameObject.SetActive(true);
-            overtext.text = "Daddy Riley lives! Here's how much you helped him make: \n\n$" + Scoring.score.ToString() + "k\n\n";
-            if (Scoring.score < 300)
+            overtext.text = "Grandpa Riley lives! Here's how much you helped him make: \n\n$" + Scoring.score.ToString() + "k\n\n";
+            if (Scoring.score < 1000)
             {
                 overtext.text += "You made some money but you could have definitely made more.";
             }
-            else if (Scoring.score < 900)
+            else if (Scoring.score < 3000)
             {
                 overtext.text += "That's a lot of money! You think you could make more?";
             }
-            else if (Scoring.score < 2000)
+            else if (Scoring.score < 4000)
             {
                 overtext.text += "Your insurance company is definitely regretting this! Do you think you can go higher?";
             }
@@ -42,11 +43,11 @@ public class GameOverText : MonoBehaviour
         {
             loseP.gameObject.SetActive(true);
             overtext.text = "You didn't keep Daddy Riley alive! You can't cash out your: \n\n$" + Scoring.score.ToString() + "k\n\n";
-            if (Scoring.score < 300)
+            if (Scoring.score < 1000)
             {
                 overtext.text += "Don't worry, it wasn't a lot of money anyways.";
             }
-            else if (Scoring.score < 900)
+            else if (Scoring.score < 3000)
             {
                 overtext.text += "It was a lot but you could always make it back with another try!";
             }
