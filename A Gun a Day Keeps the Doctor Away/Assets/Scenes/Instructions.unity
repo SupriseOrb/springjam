@@ -146,8 +146,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -172, y: 17}
-  m_SizeDelta: {x: 212.9, y: 161.6}
+  m_AnchoredPosition: {x: -199.95, y: 6.800003}
+  m_SizeDelta: {x: 239.9, y: 161.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &131412597
 MonoBehaviour:
@@ -171,7 +171,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 60800cada9ccd0a438d6b3076b26bc8e, type: 3}
-    m_FontSize: 18
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -377,8 +377,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 176, y: 6.25}
-  m_SizeDelta: {x: 334.8, y: 183.1}
+  m_AnchoredPosition: {x: 150, y: 36.6}
+  m_SizeDelta: {x: 442.1, y: 221.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &697825385
 MonoBehaviour:
@@ -402,7 +402,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 60800cada9ccd0a438d6b3076b26bc8e, type: 3}
-    m_FontSize: 18
+    m_FontSize: 16
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -413,9 +413,11 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Daddy Riley has gotten injured in a car accident. His insurance will cover
-    and reimburse him for as long as he is in the hospital. Make sure he gets as much
-    as he can. By any means necessary.
+  m_Text: Daddy Riley has gotten a deadly poison injected into him. The longer the
+    poison remains untreated, the stronger it becomes. Unless it is fully extracted,
+    he will still be poisoned. However, his insurance is covering and reimbursing
+    him for as long as he is in the the hospital. He wants to stay for as long as
+    he can but live to cash out. Help him stay as long as possible by any means necessary.
 --- !u!222 &697825386
 CanvasRenderer:
   m_ObjectHideFlags: 0
