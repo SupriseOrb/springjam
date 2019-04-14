@@ -11,18 +11,16 @@ public class AudioScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GameObject[] objs = GameObject.FindGameObjectsWithTag("Music");
-        Debug.Log(objs);
-        if (objs.Length > 1)
-        {
-            Destroy(this.gameObject);
-        }
         DontDestroyOnLoad(this.gameObject);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        GameObject[] objs = GameObject.FindGameObjectsWithTag("Music");
+        if (objs.Length > 1)
+        {
+            Destroy(this.gameObject);
+        }
     }
 }

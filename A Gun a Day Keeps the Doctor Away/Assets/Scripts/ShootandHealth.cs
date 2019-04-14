@@ -44,7 +44,7 @@ public class ShootandHealth : MonoBehaviour
         Debug.Log(health);
         if (health >= 100 || health <= 0)
         {
-            //GameOver();
+            GameOver();
         }
         else if (health <= 100 && health >= 66)
         {
@@ -86,33 +86,25 @@ public class ShootandHealth : MonoBehaviour
             currentWeap = 1;
             sr.sprite = medhp;
         }
-        else if (health <= 32 && health >= 0)
+        else if (health <= 32)
         {
             if (health == 32)
             {
-                gatlingload.Play();
-                health -= 1;
+                if (!gatlingload.isPlaying)
+                {
+                    gatlingload.Play();
+                }
             }
-            if (health == 0)
+            else if (health == 0)
             {
-                if (health == 32)
+                if (gatlingload.isPlaying)
                 {
-                    if (gatlingload.isPlaying)
-                    {
-                        gatlingload.Play();
-                    }
-                }
-                if (health == 0)
-                {
-                    if (gatlingload.isPlaying)
-                    {
-                        gatlingload.Play();
-                    }
+                    gatlingload.Play();
                 }
             }
-
             currentWeap = 2;
             sr.sprite = lowhp;
+     
         }
 
         if (Input.GetKey(KeyCode.Space))
@@ -185,17 +177,11 @@ public class ShootandHealth : MonoBehaviour
         //Instantiate(bullet, transform.position, transform.rotation);
     }
 
-    void OnTriggerEnter2D(Collider2D collide)
-    {
-        if (collide.gameObject.tag == "enemy")
-        {
-            health += 10;
-        }
-    }
 
     void GameOver()
     {
-        SceneManager.LoadScene(0);
+        Debug.Log("gameover");
+        SceneManager.LoadScene(3);
     }
 
 

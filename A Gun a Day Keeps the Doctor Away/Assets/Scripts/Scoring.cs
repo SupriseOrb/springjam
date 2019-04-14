@@ -7,12 +7,16 @@ public class Scoring : MonoBehaviour
 {
     public float score = 0;
     int sceneNum;
+    public GameObject theplayer;
+    ShootandHealth playerScript;
     // Start is called before the first frame update
     void Start()
     {
         DontDestroyOnLoad(this.gameObject);
         Scene currentScene = SceneManager.GetActiveScene();
         sceneNum = currentScene.buildIndex;
+
+
     }
 
     // Update is called once per frame
