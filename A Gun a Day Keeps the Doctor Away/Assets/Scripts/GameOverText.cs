@@ -24,7 +24,7 @@ public class GameOverText : MonoBehaviour
             overtext.text = "Grandpa Riley lives! Here's how much you helped him make: \n\n$" + Scoring.score.ToString() + "k\n\n";
             if (Scoring.score < 1000)
             {
-                overtext.text += "You made some money but you could have definitely made more.";
+                overtext.text += "You made some money but you definitely could have made more.";
             }
             else if (Scoring.score < 3000)
             {

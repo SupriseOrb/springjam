@@ -182,9 +182,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Credits
-
-'
+  m_Text: "Credits\n\nJesse Allas - Programmer\n\r\nMolina Mey - Artist, Producer\r\n\r\nBrandon
+    Nguyen - Gameplay Designer, Audio Designer, Programmer\r\n\r\nAnnie Zhao - Programmer\n"
 --- !u!222 &117888248
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -592,9 +591,9 @@ RectTransform:
   - {fileID: 140776725}
   - {fileID: 1484092166}
   - {fileID: 1458652640}
+  - {fileID: 1533633674}
   - {fileID: 599636012}
   - {fileID: 1028567623}
-  - {fileID: 1533633674}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -635,7 +634,7 @@ RectTransform:
   - {fileID: 944659104}
   - {fileID: 117888246}
   m_Father: {fileID: 559078766}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -1146,7 +1145,7 @@ RectTransform:
   - {fileID: 2084418910}
   - {fileID: 2053780341}
   m_Father: {fileID: 559078766}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -1864,7 +1863,7 @@ RectTransform:
   m_LocalScale: {x: 4.9894, y: 4.9894, z: 4.9894}
   m_Children: []
   m_Father: {fileID: 559078766}
-  m_RootOrder: 7
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -2393,10 +2392,10 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Grandpa Riley has gotten a deadly poison injected into him. The longer the
-    poison remains untreated, the stronger it becomes. Unless it is fully extracted,
-    he will still be poisoned. However, his insurance is covering and reimbursing
-    him for as long as he is in the the hospital. He wants to stay for as long as
-    he can but live to cash out. Help him stay as long as possible by any means necessary.
+    poison remains untreated, the stronger it becomes. However, his insurance is covering
+    and reimbursing him for as long as he is in the the hospital. He wants to stay
+    for as long as he can, but live to cash out. Help him stay as long as possible
+    by any means necessary.
 --- !u!222 &2053780343
 CanvasRenderer:
   m_ObjectHideFlags: 0
