@@ -101,18 +101,18 @@ TextureImporter:
       name: doctorDash_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 32
-        height: 32
+        x: 2
+        y: 9
+        width: 28
+        height: 22
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3a4e211493256214dba9a4b8a74618c4
+      spriteID: ea8c305aafec7a241a4ce2c610057c14
       vertices: []
       indices: 
       edges: []
@@ -123,16 +123,16 @@ TextureImporter:
         serializedVersion: 2
         x: 32
         y: 0
-        width: 32
-        height: 32
+        width: 31
+        height: 31
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fbd07996914527f48a4fa4c0694a9a81
+      spriteID: 01cd163722e57e04fb72c7c03890e9b9
       vertices: []
       indices: 
       edges: []
@@ -141,18 +141,18 @@ TextureImporter:
       name: doctorDash_2
       rect:
         serializedVersion: 2
-        x: 64
-        y: 0
-        width: 32
-        height: 32
+        x: 65
+        y: 5
+        width: 30
+        height: 26
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ded3cd5f0754dbb4cb2a63c14e1f6c4a
+      spriteID: 6ebcf03e93f08e94bbc238d37698bc4f
       vertices: []
       indices: 
       edges: []

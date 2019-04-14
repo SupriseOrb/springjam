@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8744719354289906276}
   - component: {fileID: 5405129495100776321}
   - component: {fileID: 4814757328711533499}
+  - component: {fileID: 3372271067388296672}
   m_Layer: 0
   m_Name: Doctor
   m_TagString: Enemy
@@ -94,11 +95,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f579118c292f3848bb2de2775b39881, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 7
+  speed: 3
+  walkspeed: 1
   stoppingDistance: 2
   StaticDashTime: 2
   canDocDash: 1
   StaticWaitTime: 2
+  anim: {fileID: 3372271067388296672}
   savedVelocity: {x: 0, y: 0}
   attackRange: 3
   damage: 15
@@ -153,3 +156,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!95 &3372271067388296672
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3793000651907593659}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: dc171b17f37964f4a850f4976fa75c0f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

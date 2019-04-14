@@ -5,6 +5,7 @@ using UnityEngine;
 public class Enemy_Doctor_Movement : MonoBehaviour
 {
     public float speed;
+    public float walkspeed;
     public float stoppingDistance;
     private Transform target;
     public float StaticDashTime;
@@ -13,7 +14,7 @@ public class Enemy_Doctor_Movement : MonoBehaviour
     public float StaticWaitTime;
     float waitTime;
     Vector3 TargetPosition;
-
+    public Animator anim;
     public Vector2 savedVelocity;
 
     //Attack Variables
@@ -47,14 +48,12 @@ public class Enemy_Doctor_Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        Vector3 dir = theplayer.transform.position - transform.position;
+        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.AngleAxis(angle - 90, Vector3.forward);
         //chase coding
-        //if (Vector2.Distance(transform.position, target.position) > stoppingDistance)
-        //{
-            //transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
-        //    transform.Translate(0, speed * Time.deltaTime, 0);
-        //}
 
+        anim.SetFloat("DashTime", DashTime);
         if (DashTime == StaticDashTime)
         {
             TargetPosition = target.position;
@@ -65,7 +64,7 @@ public class Enemy_Doctor_Movement : MonoBehaviour
 
             if (Vector2.Distance(transform.position, target.position) > stoppingDistance)
             {
-                transform.position = Vector2.MoveTowards(transform.position, TargetPosition, speed * Time.deltaTime);
+                transform.position = Vector2.MoveTowards(transform.position, TargetPosition, walkspeed * Time.deltaTime);
 
             }
             
@@ -82,9 +81,12 @@ public class Enemy_Doctor_Movement : MonoBehaviour
             {
             DashTime = StaticDashTime;
             waitTime = StaticWaitTime;
-                Vector3 dir = theplayer.transform.position - transform.position;
-                float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-                transform.rotation = Quaternion.AngleAxis(angle - 90, Vector3.forward);
+
+            }
+            if (Vector2.Distance(transform.position, target.position) > stoppingDistance)
+            {
+                transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+                transform.Translate(0, speed * Time.deltaTime, 0);
             }
         }
 
@@ -96,6 +98,7 @@ public class Enemy_Doctor_Movement : MonoBehaviour
 
         //Attack? Checking Distance between Player and Nurse
         float distanceToPlayer = Vector3.Distance(transform.position, target.position);
+        anim.SetFloat("DistanceToPlayer", distanceToPlayer);
         if (distanceToPlayer < attackRange)
         {
             //check if enough time has passed since last attack
