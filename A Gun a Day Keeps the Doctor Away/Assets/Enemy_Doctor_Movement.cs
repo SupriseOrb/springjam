@@ -41,6 +41,7 @@ public class Enemy_Doctor_Movement : MonoBehaviour
         //attackRange = 3;
         healthScript = theplayer.GetComponent<ShootandHealth>();
         scoreScript = gamecontroller.GetComponent<Scoring>();
+        damage = 10;
     }
 
     // Update is called once per frame
@@ -100,8 +101,8 @@ public class Enemy_Doctor_Movement : MonoBehaviour
             //check if enough time has passed since last attack
             if (Time.time > lastAttackTime + attackDelay)
             {
-                //target.SendMessage("Player Take Damage");
-                healthScript.health += 10;
+                healthScript.hit = true;
+                healthScript.health += damage;
                 //Record Time Attacked
                 lastAttackTime = Time.time;
             }

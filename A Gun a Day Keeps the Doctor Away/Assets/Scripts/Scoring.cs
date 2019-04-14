@@ -8,6 +8,7 @@ public class Scoring : MonoBehaviour
 {
     public float score = 0;
     int sceneNum;
+    public bool ranOutOfHealth;
     // Start is called before the first frame update
     void Start()
     {

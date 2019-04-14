@@ -109,7 +109,7 @@ public class Nurse_Enemy_Movement : MonoBehaviour
             //check if enough time has passed since last attack
             if (Time.time > lastAttackTime + attackDelay)
             {
-                //target.SendMessage("Player Take Damage");
+                healthScript.hit = true;
                 healthScript.health += damage;
                 //Record Time Attacked
                 lastAttackTime = Time.time;
