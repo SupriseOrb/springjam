@@ -25,12 +25,16 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKey("w"))//Press up arrow key to move forward on the Y AXIS
         {
-            rb2D.AddForce(transform.up * playerSpeed, ForceMode2D.Force);
+            //rb2D.AddForce(transform.up * playerSpeed, ForceMode2D.Force);
+            rb2D.velocity = transform.up * playerSpeed;
             //transform.Translate(0, playerSpeed * Time.deltaTime, 0);
         }
         if (Input.GetKey("s"))//Press up arrow key to move forward on the Y AXIS
         {
-            rb2D.AddForce(new Vector2(0, playerSpeed * Time.deltaTime * -1), ForceMode2D.Force);
+            rb2D.velocity = transform.up * playerSpeed * -1;
+
+
+//            rb2D.AddForce(new Vector2(0, playerSpeed * Time.deltaTime * -1), ForceMode2D.Force);
             //transform.Translate(0, -1 * playerSpeed * Time.deltaTime, 0);
         }
     }

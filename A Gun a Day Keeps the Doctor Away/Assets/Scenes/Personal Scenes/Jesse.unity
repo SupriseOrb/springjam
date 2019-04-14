@@ -535,6 +535,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameControls (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8233025417720199173, guid: e1f8431c8c481424797ece3201ed16e8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8233025417720199170, guid: e1f8431c8c481424797ece3201ed16e8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -17950,7 +17955,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 30
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
