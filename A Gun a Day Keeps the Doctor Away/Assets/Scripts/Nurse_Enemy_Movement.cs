@@ -21,7 +21,7 @@ public class Nurse_Enemy_Movement : MonoBehaviour
     //Nurse Death + Animiation?
     bool isDead;
     public AudioClip nurseDeath;
-    Animator anim;
+    public Animator anim;
     AudioSource NurseAudio;
 
     //Attack Variables
@@ -43,7 +43,7 @@ public class Nurse_Enemy_Movement : MonoBehaviour
     {
         theplayer = GameObject.Find("Player");
         target = theplayer.GetComponent<Transform>();
-        anim = GetComponent<Animator>();
+        //anim = GetComponent<Animator>();
         NurseAudio = GetComponent<AudioSource>();
         NurseCurHealth = NurseMaxHealth;
 
@@ -90,6 +90,8 @@ public class Nurse_Enemy_Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        float distanceToPlayer = Vector3.Distance(transform.position, target.position);
+        anim.SetFloat("DistanceToPlayer", distanceToPlayer);
         Vector3 dir = theplayer.transform.position - transform.position;
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.AngleAxis(angle - 90, Vector3.forward);
@@ -103,7 +105,7 @@ public class Nurse_Enemy_Movement : MonoBehaviour
         //Still need to add the aditional score portion
 
         //Attack? Checking Distance between Player and Nurse
-        float distanceToPlayer = Vector3.Distance(transform.position, target.position);
+        
         if (distanceToPlayer < attackRange)
         {
             //check if enough time has passed since last attack

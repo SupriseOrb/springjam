@@ -97,13 +97,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   walkspeed: 1
-  stoppingDistance: 2
+  stoppingDistance: 1
   StaticDashTime: 2
   canDocDash: 1
   StaticWaitTime: 2
   anim: {fileID: 3372271067388296672}
   savedVelocity: {x: 0, y: 0}
-  attackRange: 3
+  attackRange: 1
   damage: 15
   attackDelay: 2
   theplayer: {fileID: 0}
