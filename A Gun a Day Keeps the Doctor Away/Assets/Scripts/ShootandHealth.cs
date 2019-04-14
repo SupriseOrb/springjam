@@ -118,7 +118,7 @@ public class ShootandHealth : MonoBehaviour
      
         }
 
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetMouseButton(0))
         {
             Attack();
         }
