@@ -26,13 +26,4 @@ public class Scoring : MonoBehaviour
         }
     }
 
-    void OnGUI()
-    {
-        //Score display
-        GUIStyle scoreStyle = new GUIStyle();
-        scoreStyle.fontSize = 30;
-        scoreStyle.normal.textColor = Color.black;
-        GUI.Label(new Rect(10, 10, 100, 50), "Insurance: -$" + score.ToString() + "k", scoreStyle);
-        
-    }
 }
