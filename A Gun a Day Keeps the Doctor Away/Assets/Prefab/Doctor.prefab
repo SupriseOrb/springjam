@@ -104,7 +104,8 @@ MonoBehaviour:
   damage: 15
   attackDelay: 2
   theplayer: {fileID: 0}
-  gamecontroller: {fileID: 0}
+  gamecontroller: {fileID: 8233025417720199173, guid: e1f8431c8c481424797ece3201ed16e8,
+    type: 3}
 --- !u!61 &5405129495100776321
 BoxCollider2D:
   m_ObjectHideFlags: 0

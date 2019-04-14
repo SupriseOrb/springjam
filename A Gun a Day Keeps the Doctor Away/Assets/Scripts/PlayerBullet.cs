@@ -47,7 +47,7 @@ public class PlayerBullet : MonoBehaviour
     {
         if (other.gameObject.tag == "Enemy")
         {
-            scorescript.score += 10;
+            Scoring.score += 10;
             Destroy(other.gameObject);
             Destroy(gameObject);
         }

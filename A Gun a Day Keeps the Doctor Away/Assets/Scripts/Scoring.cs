@@ -23,10 +23,10 @@ public class Scoring : MonoBehaviour
     void Update()
     {
         //65 vs 443
-        GUI.Label(new Rect(10, 10, 100, 50), "Insurance: -$" + score.ToString() + "k", scoreStyle);
+        //GUI.Label(new Rect(10, 10, 100, 50), "Insurance: -$" + score.ToString() + "k", scoreStyle);
     }
 
-    private void OnGUI()
+    void OnGUI()
     {
         //Score display
         if (sceneNum == 1 || sceneNum == 4)
@@ -35,6 +35,7 @@ public class Scoring : MonoBehaviour
             scoreStyle.fontSize = 30;
             scoreStyle.normal.textColor = Color.white;
             GUI.Label(new Rect(10, 10, 100, 50), "Insurance: -$" + score.ToString() + "k", scoreStyle);
+          
         }
     }
 }

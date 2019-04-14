@@ -94,7 +94,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1aa96e84ee32de54984fc5ad46ffef49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameController: {fileID: 5292866623830183232, guid: 27f698f4f1a61424d92116a616edb800,
+  GameController: {fileID: 8233025417720199173, guid: e1f8431c8c481424797ece3201ed16e8,
     type: 3}
   speed: 30
   range: 5

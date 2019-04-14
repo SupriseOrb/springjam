@@ -46,7 +46,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc8462939031adb4ca889ab84a363689, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
   theplayer: {fileID: 3130779387257682341, guid: 5a7c9677f07e1c54f8fd3f25cd8ac3a0,
     type: 3}
 --- !u!114 &8233025417720199172
@@ -61,7 +60,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c966a594ecb8c84ca118f6dad463d2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  theplayer: {fileID: 0}
   score: 0
+  ranOutOfHealth: 0
 --- !u!114 &8233025417720199169
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77,7 +78,7 @@ MonoBehaviour:
   theplayer: {fileID: 3130779387257682341, guid: 5a7c9677f07e1c54f8fd3f25cd8ac3a0,
     type: 3}
   health: 0
-  enemy: {fileID: 5872761137976079010, guid: e3bd1ce7026b7f94a9104a85269d458e, type: 3}
+  enemy: {fileID: 3893701273253288651, guid: e3bd1ce7026b7f94a9104a85269d458e, type: 3}
   spawnTime: 3
   spawnPoints:
   - {fileID: 2694332107438591208, guid: 288dbd956c872934488a3c40cda83db6, type: 3}
@@ -96,7 +97,7 @@ MonoBehaviour:
   theplayer: {fileID: 3130779387257682341, guid: 5a7c9677f07e1c54f8fd3f25cd8ac3a0,
     type: 3}
   health: 0
-  enemy: {fileID: 6334359574212360981, guid: 16a9db443b90ce94c9025181fa727249, type: 3}
+  enemy: {fileID: 3793000651907593659, guid: 16a9db443b90ce94c9025181fa727249, type: 3}
   spawnTime: 3
   spawnPoints:
   - {fileID: 533153692175230677, guid: 1c161c345db17df4f999145d5c2fcef9, type: 3}
