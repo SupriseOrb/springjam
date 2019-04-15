@@ -15,6 +15,6 @@ public class InsuranceUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        iText.text = "Insurance: -$" + Scoring.score.ToString();
+        iText.text = "Insurance: -$" + Scoring.score.ToString() + "k";
     }
 }
