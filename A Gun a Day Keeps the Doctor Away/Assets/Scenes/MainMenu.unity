@@ -182,9 +182,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Credits\n\nJesse Allas - Programmer\n\r\nMolina Mey - Artist, Producer\r\n\r\nBrandon
-    Nguyen - Gameplay Designer, Audio Designer, Programmer\r, Animator\n\r\nAnnie
-    Zhao - Programmer\n\nAudio and font from GDM\n"
+  m_Text: "Credits\n\nJesse Allas - Programmer, Gameplay Designer\n\r\nMolina Mey
+    - Artist, Producer\r\n\r\nBrandon Nguyen - Gameplay Designer, Audio Designer,
+    Programmer\r, Animator\n\r\nAnnie Zhao - Programmer, UI Designer\n\nAudio and
+    font from GDM\n"
 --- !u!222 &117888248
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2479,9 +2480,9 @@ MonoBehaviour:
 
     S - Move Backward
 
-    A - Rotate Left
+    A - Move Left
 
-    D - Rotate Right
+    D - Move Right
 
     Left Click - Fire
 
