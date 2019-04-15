@@ -183,8 +183,8 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "Credits\n\nJesse Allas - Programmer\n\r\nMolina Mey - Artist, Producer\r\n\r\nBrandon
-    Nguyen - Gameplay Designer, Audio Designer, Programmer\r\n\r\nAnnie Zhao - Programmer\n\nAudio
-    and font from GDM\n"
+    Nguyen - Gameplay Designer, Audio Designer, Programmer\r, Animator\n\r\nAnnie
+    Zhao - Programmer\n\nAudio and font from GDM\n"
 --- !u!222 &117888248
 CanvasRenderer:
   m_ObjectHideFlags: 0
