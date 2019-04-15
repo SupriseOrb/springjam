@@ -21,7 +21,7 @@ public class Variable_Spawner : MonoBehaviour
 
     void spawn()
     {
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < 8; i++)
         { 
             Vector3 enemyPos = new Vector3(Random.Range(-22.0f, 22.0f), Random.Range(17.0f, -16.0f), transform.position.z);
             enemyNo = Random.Range(0, 1);
