@@ -34,7 +34,7 @@ public class GameOverText : MonoBehaviour
             {
                 overtext.text += "Your insurance company is definitely regretting this! Do you think you can go higher?";
             }
-            else if (Scoring.score < 100000)
+            else if (Scoring.score < 999999)
             {
                 overtext.text += "Wow... You actually beat one of us. Good Job! Now, can you go any higher?";
             }
