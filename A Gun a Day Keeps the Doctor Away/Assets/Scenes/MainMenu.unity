@@ -2482,7 +2482,7 @@ MonoBehaviour:
 
     D - Rotate Right
 
-    Space - Fire'
+    Left Click - Fire'
 --- !u!222 &2084418912
 CanvasRenderer:
   m_ObjectHideFlags: 0
