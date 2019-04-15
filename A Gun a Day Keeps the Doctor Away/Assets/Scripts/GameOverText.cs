@@ -46,7 +46,7 @@ public class GameOverText : MonoBehaviour
         if (Scoring.ranOutOfHealth == true)
         {
             loseP.gameObject.SetActive(true);
-            overtext.text = "You didn't keep Daddy Riley alive! You can't cash out your: \n\n$" + Scoring.score.ToString() + "k\n\n";
+            overtext.text = "You didn't keep Grandpa Riley alive! You can't cash out your: \n\n$" + Scoring.score.ToString() + "k\n\n";
             if (Scoring.score < 1000)
             {
                 overtext.text += "Don't worry, it wasn't a lot of money anyways.";
